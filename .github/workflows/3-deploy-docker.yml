@@ -40,6 +40,7 @@ jobs:
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Pull and run the new container on EC2
         uses: appleboy/ssh-action@v1
